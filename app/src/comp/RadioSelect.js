@@ -15,7 +15,7 @@ const RadioSelect = vals => {
             checked = {toggleState}
             onClick = { () => setToggleState(!toggleState) }
             />
-            <label htmlFor="genericRadio">Generic Radio</label>        
+            <label htmlFor="genericRadio">{vals.vals}</label>        
         </div>
     )
 
