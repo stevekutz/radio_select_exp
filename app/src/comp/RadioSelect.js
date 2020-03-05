@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 
-const RadioSelect = vals => {
+const RadioSelect = ({vals, typeControl}) => {
     const[toggleState, setToggleState] = React.useState(false);
 
     console.log('vals is ', vals)
@@ -10,12 +10,13 @@ const RadioSelect = vals => {
 
         <div>
             <input 
-            type="radio" 
-            id="genericRadio" name="other Radio" 
+            type={typeControl} 
+            id="genericRadio"
+            
             checked = {toggleState}
-            onClick = { () => setToggleState(!toggleState) }
+            onChange = { () => setToggleState(!toggleState) }
             />
-            <label htmlFor="genericRadio">{vals.vals}</label>        
+            <label htmlFor="genericRadio">{vals}</label>        
         </div>
     )
 
